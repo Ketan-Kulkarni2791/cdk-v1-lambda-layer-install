@@ -75,18 +75,18 @@ jobs:
         run: |
           npm install -g aws-cdk
 
-      name: Install Requirements
-      run: |
-        pip install requirements.txt
-      working-directory: ${{ env.BASE_DIRECTORY }}
+      - name: Install Requirements
+        run: |
+          pip install requirements.txt
+        working-directory: ${{ env.BASE_DIRECTORY }}
 
-      name: CDK Synth
-      run: cdk synth
-      working-directory: ${{ env.BASE_DIRECTORY }}/cdk-lambda-layers
+      - name: CDK Synth
+        run: cdk synth
+        working-directory: ${{ env.BASE_DIRECTORY }}/cdk-lambda-layers
 
-      name: CDK Deploy
-      run: cdk deploy
-      working-directory: ${{ env.BASE_DIRECTORY }}/cdk-lambda-layers
+      - name: CDK Deploy
+        run: cdk deploy
+        working-directory: ${{ env.BASE_DIRECTORY }}/cdk-lambda-layers
 
       
 
