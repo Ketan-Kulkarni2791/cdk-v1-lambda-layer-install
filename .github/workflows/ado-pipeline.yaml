@@ -4,22 +4,22 @@ name: ado-pipeline
 # Triggers
 #==============================================================
 on:
-  # push:
-  #   branches:
-  #     - master
-  #     - refs/tags/v*
-  #   path-ignore:
-  #     - .github/*
-  #     - README.md
-  #     - .gitignore
-  #     - .whitesource
+  push:
+    branches:
+      - master
+      - refs/tags/v*
+    path-ignore:
+      - .github/*
+      - README.md
+      - .gitignore
+      - .whitesource
 
   # pull_request:
   #   branches:
   #     - master
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispath:
+  # workflow_dispath:
 
 
 #==============================================================
