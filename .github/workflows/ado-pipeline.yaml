@@ -31,6 +31,7 @@ env:
   PYTHON_VERSION: 3.8.x
   NODE_VERSION: "16"
   REPOSITORY_ID: 524168482
+  BASE_DIRECTORY: "cdk-lambda-layers"
 
 
 #==============================================================
@@ -43,8 +44,6 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    env:
-      BASE_DIRECTORY: "cdk-lambda-layers"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
